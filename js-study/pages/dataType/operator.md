@@ -82,3 +82,107 @@ console.log(str); //출력값은 test 가 나온다.
       ```
 
 ````
+
+### 3.2.1 객체생성
+
+---
+
+자바스트립트의 객체 개념은 생성 방법이나 상속방식등에서 c++이나 자바와 같은 기존 객체지항언어에서의 객체 개념과는 약간 다르다.
+자바스트립트에서는 클래스라는 개념이 없고 객체 리터럴이나 생성자 함수 등 별도의 생성방식이 존재한다.
+
+자바스크립트에서 객체를 생성하는 방법은 크게 3가지가 있는데 1.기본제공 Object() 객체 생성자 함수를 이용하는 방법 2.객체 리터럴을 이용하는 방법 3.생성자 함수를 이용하는 방법
+
+1.Object() 생성자 함수 이용
+자바스크립트에서는 객체를 생성할때 내장 Object() 생성자 함수를 제공
+아래 예시를 만들어 보자.
+
+```
+Object() 를 이용해서 foo 빈 객체 생성
+var foo = new Object();
+
+//foo 객체 프로퍼티 생성
+foo.name = 'foo';
+foo.age = 30;
+foo.gender ='lawn';
+
+console.log(typeof foo); // 출력값은 object
+console.log(foo); //출력값 {name :'foo' , age : 30 ,gender : 'lawn'}
+```
+
+2.객체 리터럴 방식 이용
+리터럴이란 용어의 의미는 표기법이다.
+객체 리터럴이란 뜻은 객체를 생성하는 표기법을 의미
+객체 리터럴방식은 간단한 표기법으로도 객체를 생성할 수 있는 자스의 강력한 문법이다.
+
+객체 리터럴은 중괄호 ({}) 를 이용해서 객체를 생성
+{} 안에 아무것도 적지 않은 경우는 빈 객체가 생성되며, 중괄호안에 "프로퍼티이름" :"프로퍼티 값" 형태로 표기하면,
+해당 프로퍼티가 추가된 객체를 생성 할 수 있다.
+
+여기서 프로퍼티 이름은 문자열이나 숫자가 올수 있다.
+그리고 프로퍼티 값으로는 자바 스트립트의 값을 나타내는 어떤 표현식도 올 수 있고
+이값이 함수일 경우에는 이런 프로퍼티를 메서드라고 부른다.
+아래 예제를 보자
+
+```
+//객체를 리터럴 방식으로 foo 객체 생성
+
+var foo = {
+      name : 'foo',
+      age : 30 ,
+      gender : 'lawn'
+}
+
+console.log(typeof foo); //출력값 object
+console.log(foo);  //출력값 {name :'foo' , age : 30 ,gender : 'lawn'}
+```
+
+3.2.1.3 생성자 함수 이용
+
+자바스크립트의 경우는 함수를 통해서도 객체를 생성할 수 있다.
+이렇게 객체를 생성하는 함수를 생성자 함수라고 부른다.
+
+3.2.2 객체 프로퍼티 읽기/쓰기/갱신
+
+객체는 새로운 값을 가진 프로퍼티를 생성하고,
+생성된 프로퍼티에 접근해서 해당 값을 읽거나 또는
+원하는 값으로 프로퍼티의 값을 갱신할 수 있다.
+
+객체의 프로퍼티에 접근하려면 다음과 같이 두가지 방법을 사용한다.
+
+- 대괄호([]) 표기법
+- 마침표(.) 표기법
+
+```
+//객체 리터럴 방식을 통한 foo 객체생성
+
+var foo = {
+      name :'foo',
+      major : 'computer science'
+
+      //객체 프로퍼티 읽기
+      console.log(foo.name) //foo
+      console.log(foo['name']) //foo
+      console.log(foo.nickname) //undefined
+
+      //객체 프로퍼티 갱신
+
+      foo.major = 'Biology'
+      console.log(foo.major) //Biology
+      console.log(foo['major'])
+
+      //객체 프로퍼티 동적 생성
+      foo.age = 30;
+      console.log(foo.age); //출력값 30
+
+      //대괄호 표기법만 사용해야 할 경우
+      foo['full-name'] ='foo bar';
+      console.log(foo['full-name']);  //출력값 foo bar
+      console.log(foo.full-name); //출력값 NaN
+      console.log(foo.full); //출력값  undefined
+      console.log(name);  //출력값  undefined
+
+
+}
+```
+
+1.프로퍼티 읽기 2.프로퍼티 갱신 3.프로퍼티 동적 생성 4.대괄호 표기법만을 사용해야 하는 경우
