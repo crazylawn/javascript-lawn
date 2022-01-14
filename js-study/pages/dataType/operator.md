@@ -136,12 +136,16 @@ console.log(typeof foo); //출력값 object
 console.log(foo);  //출력값 {name :'foo' , age : 30 ,gender : 'lawn'}
 ```
 
-3.2.1.3 생성자 함수 이용
+### 3.2.1.3 생성자 함수 이용
+
+---
 
 자바스크립트의 경우는 함수를 통해서도 객체를 생성할 수 있다.
 이렇게 객체를 생성하는 함수를 생성자 함수라고 부른다.
 
-3.2.2 객체 프로퍼티 읽기/쓰기/갱신
+### 3.2.2 객체 프로퍼티 읽기/쓰기/갱신
+
+---
 
 객체는 새로운 값을 가진 프로퍼티를 생성하고,
 생성된 프로퍼티에 접근해서 해당 값을 읽거나 또는
@@ -248,3 +252,52 @@ NaN(Not a Number) 값
 가령  1- 'hi' 라는 연산의 결과는 NaN 이다.
 1이라는 숫자와 문자열 'hello' 를 빼는 연산을 수행했기 때문이다.
 ```
+
+### 3.2.3 for in 문 과 객체 프로퍼티 출력
+
+```
+
+//객체 리터럴을 통한 foo 객체 생성
+
+var foo = {
+      name :'lawn',
+      age : 30 ,
+      major : 'computer Science'
+}
+
+//for in 문을 이용한 객체 프로퍼티 출력
+
+var prop;
+ for(prop in foo) {
+       console.log(prop , foo[prop])
+ }
+
+//출력값
+
+      name lawn,
+      age  30 ,
+      major  computer Science
+```
+
+### 3.2.4 객체 프로퍼티 삭제
+
+---
+
+자스에서는 객체의 프로퍼티를 delete 연산자를 이용해서 즉시 삭제할 수 있다.
+여기서 주의 할 점은 delete 연산자는 객체의 프로퍼티를 삭제할뿐 ,
+객체 자체를 삭제하지는 못한다는 것이다.
+
+```
+var foo = {
+      name :'lawn',
+      age : 30 ,
+      major : 'computer Science'
+}
+
+delete foo;
+console.log(foo.name);
+```
+
+이번에 foo 객체 자체를 delete 연산자를 이용해서 삭제하려고 했다.
+그런데 삭제가 되지 않았다. foo.name 값을 출력했을때 'foo' 값이 그대로 출력되었기 때문이다.
+즉, delete 연산자는 프로퍼티만 삭제하기 때문이다.
