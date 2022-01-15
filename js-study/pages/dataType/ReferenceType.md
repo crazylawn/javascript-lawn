@@ -60,9 +60,38 @@ console.log(objB == objC); //출력값 true
 
 객체와 같은 참조타입의 경우 참조값이 같아야 true 가 된다.
 
-그래서 objA 와 objB 를 비교했을때는 참조값이 같지 않기 때문에 fasle 가 나오고
+그래서 objA 와 objB 를 비교했을때는 참조값이 같지 않기 때문에 false 가 나오고
 objB 와 objC 를 비교했을때는 참조하는 값이 같은 곳을 바라보고 있기 때문에 즉 같은 객체를 참조하므로 true 가 나온다
 
-```
+# 3.3.2 참조에 의한 호출방식
 
+값에 의한 호출 Call By Value
+===> 호출된 함수의 매개변수로 복사된 값이 전달된다.
+
+참조의 의한 호출 Call By Reference
+===> 함수 호출시 인자로 참조타입인 객체를 전달할 경우,
+객체의 프로퍼티값이 함수의 매개변수로 복사되지 않고,
+인자로 넘긴 객체의 참조값이 그대로 함수 내부로 전달된다.
+
+즉,인자로 넘긴 실제 객체의 값을 변경 할 수 있다.
+
+```
+3-11 Call by Value 와 Call by Reference 차이
+
+var a = 100;
+var objA = {value : 100};
+
+function changeArg(num ,obj) {
+    num = 200;
+    obj.value = 200;
+
+    console.log(num);
+    console.log(obj);
+
+}
+
+changeArg(a, objA);
+
+console.log(a); // 100   ==> 값의 의한 호출은 값이 바뀌지 않는다.
+console.log(objA);  //200   ==> 참조에 의한 호출은 값이 바뀐다.
 ```
