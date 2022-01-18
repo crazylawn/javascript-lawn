@@ -108,3 +108,22 @@ console.log(arr); //출력값 ['zero','one', 'three']
 console.log(arr.length); // 출력값 3
 
 ```
+
+# 3.5.8 Array() 생성자 함수
+
+- 호출할때 인자가 1개이고 , 숫자일 경우 : 호출된 인자를 length로 갖는 빈 배열 생성
+- 그외의 경우 : 호출된 인자를 요소로 갖는 배열 생성
+
+3-24 Array() 생성자 함수를 통한 배열 생성
+
+var foo = new Array(3);
+console.log(foo); // [undefined,undefined,undefined]
+console.log(foo.length); //3
+
+var bar = new Array(1,2,3);
+console.log(bar); // 출력값 [1,2,3]
+console.log(bar.length); //출력값 3
+
+foo 배열의 경우는 Array() 생성자 함수를 호출할 때 3이라는 숫자 인자 1개만 넘겼으므로,
+앞서 설명한 것 처럼 3개의 요소가 빈 배열을 생성
+but, bar 배열의 경우는 Array(1,2,3) 와 같이 호출했으므로 1,2,3 세개의 숫자가 요소인 배열이 생성
