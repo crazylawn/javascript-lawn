@@ -123,6 +123,7 @@ console.log(foo.length); //3
 var bar = new Array(1,2,3);
 console.log(bar); // 출력값 [1,2,3]
 console.log(bar.length); //출력값 3
+console.log(bar.length); //출력값 3
 
 foo 배열의 경우는 Array() 생성자 함수를 호출할 때 3이라는 숫자 인자 1개만 넘겼으므로,
 앞서 설명한 것 처럼 3개의 요소가 빈 배열을 생성
