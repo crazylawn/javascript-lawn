@@ -136,3 +136,13 @@ but, bar 배열의 경우는 Array(1,2,3) 와 같이 호출했으므로 1,2,3 �
 - 3.5.3 배열의 length 프로퍼티에서 봤지만 배열의 length 프로퍼티는 배열의 동작에 있어서 중요한 프로퍼티이다.
 
 - 만약 일반객체에 length 프로퍼티를 가진 객체를 유사 배열 객체
+
+# 3-25 유사배열 객체의 배열 메서드 호출
+
+var arr = ['bar'];
+var obj = {name :'foo' , length :1}
+
+arr.push('baz');
+console.log(arr); 출력값 ['bar' ,'baz']
+
+obj.push('baz'); //error
