@@ -146,3 +146,18 @@ arr.push('baz');
 console.log(arr); 출력값 ['bar' ,'baz']
 
 obj.push('baz'); //error
+
+4장에서 배울 apply() 메서드를 사용해서 객체지향표준 배열 메서드를 활용해보자!
+
+이 다음 코드는 apply() 메서드 과 4.4.2.4 apply 메서드를 이요한 명시적인 this 바인딩 부분이다
+
+# 예제 3-26 유사 배열 객체에서 apply()를 활용한 배열 메서드 호출
+
+var arr =['bar'];
+var obj = {name :'foo' , length :1};
+
+arr.push('baz');
+console.log(arr); //출력값 ['bar' ,'baz'];
+
+Array.prototype.push.apply(obj , ['baz']);
+console.log(obj); //출력값 {'1' :'baz' , name :'foo' , length :2};
