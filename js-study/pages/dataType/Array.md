@@ -161,3 +161,19 @@ console.log(arr); //출력값 ['bar' ,'baz'];
 
 Array.prototype.push.apply(obj , ['baz']);
 console.log(obj); //출력값 {'1' :'baz' , name :'foo' , length :2};
+
+# 3.6 기본타입과 표준 메서드
+
+```
+예제 3-27 기본타입 변수에서의 메서드 호출
+
+//숫자 메서드 호출
+var num = 0.5;
+console.log(num.toExponential(1)); //출력값 '5.0e-1'
+
+//문자열 메서드 호출
+console.log('test'.charAt(2)) //출력값 'S'
+```
+
+toExponential : 표준 숫자형 메서드
+charAt() 문자열에서 인자로 받은 위치에 있는 문자 반환
