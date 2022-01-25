@@ -177,3 +177,38 @@ console.log('test'.charAt(2)) //출력값 'S'
 
 toExponential : 표준 숫자형 메서드
 charAt() 문자열에서 인자로 받은 위치에 있는 문자 반환
+
+# 3.7 연산자
+
+## 3.7.1 + 연산자
+
+```
+var add1 = 1+1;
+var add2 = `my` + `string`;
+var add3 = 1+ 'string';
+var add4 =  'string' +2;
+
+```
+
+## 3.7.2 typeof 연산자
+
+각 타입별 typeof 연산자 결과
+
+typeof 연산자는 피연산자의 타입을 문자열 형태로 리턴한다.
+여기서 null 과 배열이 object 라는 점이고 함수는 function 이라는 점에 유의해야함
+
+기본타입
+
+숫자 number
+문자열 string
+불린값 boolean
+null object
+undefined undefined
+객체 object
+
+# 3.7.3 동등연산자와 일치연산자
+
+숫자 1과 문자열 '1'을 == 와 === 연산자로 각각 비교했다.
+== 연산자의 경우에는 두 피연산자가 타입이 다르므로 같은 타입을 변환해서 두 값이 같다고 판단해서 true 가 됐다
+반면에 === 연산자는 두 피연산자가 타입이 다르므로 바로 false 가 출력된다.
+== 연산자의 비교는 타입변환에 따른 잘못된 결과를 얻을 수 있으므로 대부분의 자스에서 == 연산자로 비교하는 것을 추천하지 않는다
