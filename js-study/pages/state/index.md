@@ -16,3 +16,27 @@ setState를 동기적으로 실행시키기
 힘들게 state를 만들어 써야하는 이유는 이거다!
 "변수가 변경될 때 자동으로 관련된 HTML을 재렌더링되게 만들고 싶으면"
 그럴 때 변수 말고 state에 저장해서 데이터바인딩 하셔야합니다.
+
+함수형 업데이트
+
+setState 도 함수형 업데이트를 할 수 있는데, 보통 한 이벤트 함수 내에서
+setState 를 여러번 연속으로 진행해야하는 경우에 사용한다
+
+handleCount =() => {
+setState((state) => return {
+counter: state.counter+1
+})
+}
+
+이런식으로 state 를 인자로 가져와서 함수형으로 업데이트 시켜준다
+
+setState 는 단순히 상태를 바꾸는 함수가 아니라, 바꿔달라고 요청해주는 함수이다.
+so, 리액트에서는 상태가 바로 업데이트 되는 것이 아니라 비동기적으로 업데이트가 된다.
+상태가 업데이트 되고난 후에 어떤작업을 하고 싶으면 setState 함수릐 두번째 파라미터에 콜백함수를 넣어준다
+handleCount =() => {
+setState((state) => return {
+counter: state.counter+1
+},
+() => {console.log('count!!!!')}
+)
+}
