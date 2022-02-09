@@ -1,5 +1,7 @@
 setState 에 대하여
 
+setState(변경할 상태 값, 변경 후 실행 할 콜백함수)
+
 복수의 프로세스가 존재할 때,
 동기(synchronous)적 처리는 하나씩 순차적으로, 이전 작업이 끝날 때까지 기다렸다가 처리하는 것
 비동기(asynchronous)적 처리는 전 작업이 끝나지 않아도 다음 작업으로 넘어가서 동시에 처리하는 것
@@ -40,3 +42,26 @@ counter: state.counter+1
 () => {console.log('count!!!!')}
 )
 }
+
+setState에서는 async await를 사용하면 될까?
+정답은 안된다!
+
+async/ await 의 기반은 promise다.
+async 함수는 promise를 반환하고 promise가 함수로부터 반환할 값을 resolve한다.
+setState는 promise를 반환하지 않기에 await와 함께 사용해서는 안된다.
+
+```
+ updateState = (payload) => {
+  return new Promise((resolve, reject) => {
+    this.setState({
+      name: payload
+    }, () => {
+      resolve('update')
+    });
+  });
+};
+
+showResult = async () => {
+  let resultMsg = await updateState('비동기 await 사용하는예제 입니다');
+};
+```
