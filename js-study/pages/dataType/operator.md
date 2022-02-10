@@ -301,3 +301,17 @@ console.log(foo.name);
 이번에 foo 객체 자체를 delete 연산자를 이용해서 삭제하려고 했다.
 그런데 삭제가 되지 않았다. foo.name 값을 출력했을때 'foo' 값이 그대로 출력되었기 때문이다.
 즉, delete 연산자는 프로퍼티만 삭제하기 때문이다.
+
+- 짚고 넘어가기
+
+false vs null vs undefined
+
+false 는 false 라는 값이 있는 것이고,
+null 은 아무것도 없는 것이고,
+undefined 는 정의가 되어있지 않다는 것!
+
+const a = false;
+const b = null;
+let c;
+
+console.log(a,b,c) //false, null , undefined
