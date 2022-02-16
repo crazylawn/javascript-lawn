@@ -72,3 +72,12 @@ function lastMonth() {
   return getDateStr(d);
 }
 ```
+
+//분구하기
+var now = new Date(); // 현재 날짜 및 시간
+var minutes = now.getMinutes(); // 분
+console.log("분 : ", minutes);
+//초 구하기
+var now = new Date(); // 현재 날짜 및 시간
+var seconds = now.getSeconds(); // 초
+console.log("초 : ", seconds);
