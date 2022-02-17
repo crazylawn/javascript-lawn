@@ -81,3 +81,38 @@ console.log("분 : ", minutes);
 var now = new Date(); // 현재 날짜 및 시간
 var seconds = now.getSeconds(); // 초
 console.log("초 : ", seconds);
+
+//연도 더하기/빼기
+
+- setFullYear()와 getFullYear()를 활용
+
+```
+// 내년
+const nextYear = new Date(2022, 2, 17);
+nextYear.setFullYear(nextMonth.getFullYear() + 1);
+console.log(nextYear.toLocaleString());
+
+```
+
+//월 더하기/빼기
+
+- setMonth()와 getMonth()를 활용
+
+```
+// 다음달 const nextMonth = new Date(2022, 2, 17);
+ nextMonth.setMonth(nextMonth.getMonth() + 1);
+ console.log(nextMonth.toLocaleString());
+```
+
+// 일 더하기/빼기
+
+- setDate()와 getDate()를 활용
+
+```
+// 어제 const yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+console.log(yesterday.toLocaleString());
+// 내일 const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+console.log(tomorrow.toLocaleString());
+```
