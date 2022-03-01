@@ -62,3 +62,20 @@ return (
 
 5.undefined 를 렌더링하지 않기
 리액트 컴포넌트에서는 함수에서 undefined 만 반환하여 렌더링하는 상황을 만들면 안된다.예를 들어 다음과 같은 코드는 오류를 발생시킨다.
+
+```
+import React from 'react';
+//undefined 를 렌더링 하지 않기
+
+function APP(){
+  const name  = 'undefined';
+  return name;
+}
+export default App;
+```
+
+코드를 저장한 후 브라우저를 확인해 보면 다음과 같은 오류도 볼 수 있는데
+
+App(...):Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null
+
+어떤값이 undefined 일 수 있다면 , OR(||) 연산자를 사용해서 해당 값이 undefined일때 사용할 값을 지정 할 수 있으므로 간단하게 오류를 방지할 수 있다.
