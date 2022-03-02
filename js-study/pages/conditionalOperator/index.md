@@ -79,3 +79,29 @@ export default App;
 App(...):Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null
 
 어떤값이 undefined 일 수 있다면 , OR(||) 연산자를 사용해서 해당 값이 undefined일때 사용할 값을 지정 할 수 있으므로 간단하게 오류를 방지할 수 있다.
+
+반면 JSX 내부에서 undefined 를 렌더링하는 것은 괜찮다.
+
+```
+import React from 'react';
+
+function App() {
+  const name = 'undefined';
+  return <div>{name}</div>
+}
+
+export default App;
+```
+
+name 값이 undefined 일때 보여주고 시픙 문구가 있다면 다음과 같이 코드를 작성할 수 있다.
+
+```
+import React from 'react';
+
+function App(){
+  const name = 'undefined';
+  return <div>{name || 'react'}</div>
+}
+
+export default App;
+```
