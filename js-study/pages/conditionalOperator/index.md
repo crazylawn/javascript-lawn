@@ -12,6 +12,16 @@ isStudent ? (
 ) : (
   alert('Enjoy the movie')
 );
+
+```
+
+```
+조건이 여러개 붙으면 이렇게 쓰는게 더 가독성이 좋다
+return (
+	<div>{0 : AComponent
+    	  1 : BComponent
+          2 : CComponent}[a]}</div>
+)
 ```
 
 A ? (B ? C : D) : E
