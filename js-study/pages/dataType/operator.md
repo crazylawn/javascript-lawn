@@ -315,3 +315,13 @@ const b = null;
 let c;
 
 console.log(a,b,c) //false, null , undefined
+
+## 더블 마침표(..) 와 toString
+
+이 기능은 제법 신박하다고 느꼈는데,
+원래라면 진법 변환을 할 때 Number.toString(radix) 와 같은 방식을 많이 사용했다.
+이 방식을 몰랐더라면 직접 해당 진수의 숫자로 나눠서 계산하는 로직을 구현한 사람도 있었을 것이다.
+그런데 .. 를 사용하면 더 간편하게 할 수 있다.
+
+5..toString(2) // '101'
+Number(5).toString(2) === 5..toString(2) // true
