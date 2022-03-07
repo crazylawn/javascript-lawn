@@ -325,3 +325,12 @@ console.log(a,b,c) //false, null , undefined
 
 5..toString(2) // '101'
 Number(5).toString(2) === 5..toString(2) // true
+
+## 더블 물결(~~) — Math.floor
+
+물결표를 두 번 사용하는 것으로, 기능이 Math.floor 와 똑같고,
+심지어 Math.floor 보다 더 빠르다고하는 곳도 있다.
+
+이는 사실 !! 와 마찬가지인 논리로,
+뒤집은 동전을 다시 뒤집어 원래의 모습을 취하게하는 방식인데,
+~ 를 한 번 붙일 때 소수점이 떨어져 나가는 것을 이용한 방식이다.
