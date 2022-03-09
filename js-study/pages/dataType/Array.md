@@ -264,3 +264,70 @@ console.log(arr); // ["d", "a", "b", "c"]
 
 var arr = [1,2,3];
 arr[3] = 4; // arr = [1,2,3,4]
+
+# includes
+
+Array.prototype.includes() /arr.includes(valueToFind[, fromIndex])
+
+includes() 메서드는 배열이 특정값을 포함하고 있는지의 여부를 boolean 값으로 반환한다.
+
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// expected output: true
+
+console.log(pets.includes('at'));
+// expected output: false
+
+파라미터
+
+- valueToFind
+
+찾으려는 값
+
+- fromIndex
+
+검색을 시작할 index
+
+기본값은 0
+
+음수가 입력되면 arr.length+fromIndex로 계산
+
+리턴값
+
+- 배열이 valueToFind 값을 포함하고 있는지의 여부(boolean)
+
+```
+배열에 특정 값이 포함되어 있는지 여부 체크하기
+
+
+배열 안에 특정 값이 포함되어 있는지 여부를 체크하기 위해서
+
+기본적으로 반복문을 사용하여 체크할 수도 있지만,
+
+여기서는 몇 가지 Javascript 함수를 소개한다.
+
+1. indexOf(), lastIndexOf()
+2. includes()
+3. findIndex()
+4. some()
+5. includes() vs some()
+
+
+ indexOf() 함수는
+
+배열 안에서 찾으려는 값(searchElement)과 정확하게 일치(===)하는'첫번째' element의 index를 리턴한다.
+
+
+ lastIndexOf() 함수는
+
+배열 안에서 찾으려는 값(searchElement)과 정확하게 일치(===)하는 '마지막' element의 index 를 리턴한다.
+
+
+
+```
