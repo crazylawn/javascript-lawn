@@ -12,4 +12,8 @@ import { useCookies } from "react-cookie";
 export default function App() {
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 }
+  //쿠키담기
+  setCookie('user', data)
+  //쿠기 지우기
+  removeCookie('user')
 ```
