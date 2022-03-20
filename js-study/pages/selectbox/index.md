@@ -4,3 +4,7 @@ handleChange = (e) => {
 let value = Array.from(e.target.selectedOptions, option => option.value);
 this.setState({values: value});
 }
+//선택한 필요한 아이템 값 가져오기
+const selectedValue = items.find((f) => f.value === boxType)
+return [{ ...selectedValue, value: 'selected' }, ...items]
+}, [boxType])
