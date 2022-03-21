@@ -8,3 +8,6 @@ this.setState({values: value});
 const selectedValue = items.find((f) => f.value === boxType)
 return [{ ...selectedValue, value: 'selected' }, ...items]
 }, [boxType])
+
+//필요한 아이템 값에 다른 필요한 값들도 넣어서 find 로 비교해서 가져와서 보여준다!
+const selectedValue = items.find((f) => f.value === boxType)
