@@ -331,3 +331,9 @@ console.log(pets.includes('at'));
 
 
 ```
+
+1. replace() 함수
+
+문자열에서 변경하려는 문자열이 여러 번 반복될 경우,
+
+Javascript에는 replaceAll() 은 없다!
