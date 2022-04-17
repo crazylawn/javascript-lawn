@@ -16,3 +16,8 @@ const handleChange = async (user) => {
 await updateUser(user)
 return mutate() // mutate() 는 프라미스!
 }
+
+    const date = dayjs()
+
+setDate(date.add(0, 'day').format('YYYY-MM-DD'))
+//필요한 경우 날짜를 증가시킴
